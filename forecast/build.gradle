@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'forecast-android'
+
+    publishedGroupId = 'android.zetterstrom.com.forecast'
+    libraryName = 'forecast'
+    artifact = 'forecast'
+
+    libraryDescription = 'Android library for the Forecast API'
+
+    siteUrl = 'https://github.com/kevzetterstrom/forecast-android'
+    gitUrl = 'https://github.com/kevzetterstrom/forecast-android.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'kevzetterstrom'
+    developerName = 'Kevin Zetterstrom'
+    developerEmail = 'Kevin.Zetterstrom@gmail.com'
+
+    licenseName = 'Apache License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0'
+    allLicenses = ['Apache']
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

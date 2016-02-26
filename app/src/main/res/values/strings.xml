@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Snow</string>
+    <string name="api_attribution">Powered by Forecast</string>
+    <string name="snowfall_none">No snow is expected</string>
+    <string name="snowfall_some">of snow is expected!</string>
+    <string name="snowfall_amount">%1$.2f inches</string>
+    <string name="snowfall_error">An error occurred when getting the snowfall</string>
+    <string name="dialog_permission_error_title">Unable to get location</string>
+    <string name="dialog_permission_permanently_denied_message">To use Snow, you must enable the Coarse Location Permission in your device settings</string>
+    <string name="dialog_permission_denied_message">To use Snow, you must give access to the Coarse Location Permission</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_retry">Retry</string>
+    <string name="dialog_cancel">Cancel</string>
+
+</resources>
