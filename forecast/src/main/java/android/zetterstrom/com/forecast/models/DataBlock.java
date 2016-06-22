@@ -30,6 +30,7 @@ import java.util.ArrayList;
  * <p/>
  * Created by Kevin Zetterstrom on 2/10/16.
  */
+@SuppressWarnings("unused")
 public class DataBlock implements Serializable {
 
     private static final long serialVersionUID = 2215428778754516836L;

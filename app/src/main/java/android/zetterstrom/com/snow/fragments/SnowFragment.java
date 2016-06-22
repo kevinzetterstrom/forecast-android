@@ -44,6 +44,8 @@ import android.zetterstrom.com.snow.callbacks.ForecastCallback;
 import android.zetterstrom.com.snow.utils.SnowHelper;
 
 /**
+ * Fragment to demo the Forecast API
+ * <p/>
  * Created by Kevin Zetterstrom on 2/15/16.
  */
 public class SnowFragment extends Fragment {
@@ -164,7 +166,6 @@ public class SnowFragment extends Fragment {
             }
         });
     }
-
 
     private void showForecast() {
         if (mForecast != null && mSnowLabelTextView != null && mSnowAmountTextView != null) {

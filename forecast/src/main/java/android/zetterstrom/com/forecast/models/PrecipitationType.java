@@ -34,20 +34,21 @@ public enum PrecipitationType {
     @SerializedName(ModelConstants.PRECIPITATION_HAIL)
     HAIL(ModelConstants.PRECIPITATION_HAIL);
 
-    private String text;
+    private final String mText;
 
     PrecipitationType(String text) {
-        this.text = text;
+        mText = text;
     }
 
     public String getText() {
-        return this.text;
+        return mText;
     }
 
+    @SuppressWarnings("unused")
     public static PrecipitationType precipitationTypeFromString(String text) {
         if (text != null) {
             for (PrecipitationType precipitationType : PrecipitationType.values()) {
-                if (text.equalsIgnoreCase(precipitationType.text)) {
+                if (text.equalsIgnoreCase(precipitationType.mText)) {
                     return precipitationType;
                 }
             }

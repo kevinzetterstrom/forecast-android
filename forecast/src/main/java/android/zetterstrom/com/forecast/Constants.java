@@ -16,9 +16,10 @@
 package android.zetterstrom.com.forecast;
 
 /**
+ * Constants used for the forecast client
  * Created by Kevin Zetterstrom on 2/11/16.
  */
-public class Constants {
+public final class Constants {
 
     static final String API_BASE_URL = "https://api.forecast.io/forecast/";
 
@@ -38,4 +39,6 @@ public class Constants {
     static final int DEFAULT_CACHE_SIZE = 5 * 1024 * 1024; // 5MB;
     static final int DEFAULT_CONNECTION_TIMEOUT = 60; // seconds
 
+    private Constants() {
+    }
 }

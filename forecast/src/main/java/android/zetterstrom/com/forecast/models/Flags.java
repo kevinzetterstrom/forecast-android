@@ -30,6 +30,7 @@ import java.util.ArrayList;
  * <p/>
  * Created by Kevin Zetterstrom on 2/10/16.
  */
+@SuppressWarnings("unused")
 public class Flags implements Serializable {
 
     private static final long serialVersionUID = 2335711403921076215L;

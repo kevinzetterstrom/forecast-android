@@ -36,10 +36,15 @@ import retrofit2.Response;
  * <p/>
  * Created by Kevin Zetterstrom on 2/17/16.
  */
-public class SnowHelper {
+public final class SnowHelper {
 
     private static final String PREVIOUS_LATITUDE = "PREVIOUS_LATITUDE";
     private static final String PREVIOUS_LONGITUDE = "PREVIOUS_LONGITUDE";
+
+    private static final int DISTANCE_TO_ISSUE_NEW_REQUEST = 50;
+
+    private SnowHelper() {
+    }
 
     public static void getForecast(Location location, final ForecastCallback callback) {
         SharedPreferences sharedPreferences =
@@ -58,7 +63,7 @@ public class SnowHelper {
             Location.distanceBetween(previousLatitude, previousLongitude, forecastLatitude, forecastLongitude,
                                      results);
 
-            if (results[0] < 50) {
+            if (results[0] < DISTANCE_TO_ISSUE_NEW_REQUEST) {
                 forecastLatitude = previousLatitude;
                 forecastLongitude = previousLongitude;
             }

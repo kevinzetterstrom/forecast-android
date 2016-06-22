@@ -33,6 +33,7 @@ import java.util.ArrayList;
  * <p/>
  * Created by Kevin Zetterstrom on 2/10/16.
  */
+@SuppressWarnings("unused")
 public class Forecast implements Serializable {
 
     private static final long serialVersionUID = -2568653365791715874L;

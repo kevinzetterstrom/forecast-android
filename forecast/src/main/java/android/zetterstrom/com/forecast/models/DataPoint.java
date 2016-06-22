@@ -40,6 +40,7 @@ import java.util.Date;
  * <p/>
  * Created by Kevin Zetterstrom  on 2/10/16.
  */
+@SuppressWarnings("unused")
 public class DataPoint implements Serializable {
 
     private static final long serialVersionUID = 1089660797202113138L;

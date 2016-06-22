@@ -16,7 +16,7 @@ For a more in depth look at the usage, refer to the [example Android app](app).
 ### Gradle
 Specify the dependency in your `build.gradle` file (make sure `jcenter()` is included as a repository)
 ```groovy
-compile 'android.zetterstrom.com.forecast:forecast:1.0.0'
+compile 'android.zetterstrom.com.forecast:forecast:1.1.0'
 ```
 
 ### Forecast API Registration

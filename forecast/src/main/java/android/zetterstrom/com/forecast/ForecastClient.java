@@ -60,19 +60,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * <p/>
  * Created by Kevin Zetterstrom  on 2/9/16.
  */
-public class ForecastClient {
+public final class ForecastClient {
 
     @Nullable
-    private Language mLanguage;
+    private final Language mLanguage;
     @Nullable
-    private Unit mUnit;
+    private final Unit mUnit;
 
     @Nullable
     private List<String> mExcludeBlocks;
 
-    private String mApiKey;
-    private String mCacheControl;
-    private ForecastService mService;
+    private final String mApiKey;
+    private final String mCacheControl;
+    private final ForecastService mService;
     private static ForecastClient mInstance;
 
     private ForecastClient(ForecastConfiguration forecastConfiguration) {
@@ -117,7 +117,7 @@ public class ForecastClient {
         return mInstance;
     }
 
-    private OkHttpClient createOkHttpClient(ForecastConfiguration forecastConfiguration) {
+    private static OkHttpClient createOkHttpClient(ForecastConfiguration forecastConfiguration) {
         OkHttpClient client = new OkHttpClient();
         client = client.newBuilder()
                 .cache(forecastConfiguration.getCache())
@@ -128,7 +128,7 @@ public class ForecastClient {
         return client;
     }
 
-    private Gson createGson() {
+    private static Gson createGson() {
         final long MILLIS = 1000;
         GsonBuilder builder = new GsonBuilder();
 
@@ -150,6 +150,7 @@ public class ForecastClient {
      * @return the Response object with a Forecast
      * @throws IOException
      */
+    @SuppressWarnings("unused")
     public Response<Forecast> getForecastSync(double latitude, double longitude) throws IOException {
         return getForecastSync(latitude, longitude, null);
     }
@@ -209,6 +210,7 @@ public class ForecastClient {
      * @param forecastCallback {@link Callback} to be invoked when request completes, with a {@link Forecast}
      * @return {@link Call} object, so that you may cancel the request
      */
+    @SuppressWarnings("unused")
     public Call<Forecast> getForecast(double latitude, double longitude,
                                       @NonNull Callback<Forecast> forecastCallback) {
         return getForecast(latitude, longitude, null, forecastCallback);
@@ -265,7 +267,7 @@ public class ForecastClient {
         return forecastCall;
     }
 
-    private String getLocation(double longitude, double latitude, @Nullable Double time) {
+    private static String getLocation(double longitude, double latitude, @Nullable Double time) {
         String location = String.valueOf(latitude) + "," + String.valueOf(longitude);
         if (time != null) {
             location += "," + time.toString();

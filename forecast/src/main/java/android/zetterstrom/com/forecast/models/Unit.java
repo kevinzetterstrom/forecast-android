@@ -37,20 +37,21 @@ public enum Unit {
     @SerializedName(ModelConstants.UNIT_AUTO)
     AUTO(ModelConstants.UNIT_AUTO);
 
-    private String text;
+    private final String mText;
 
     Unit(String text) {
-        this.text = text;
+        mText = text;
     }
 
     public String getText() {
-        return this.text;
+        return mText;
     }
 
+    @SuppressWarnings("unused")
     public static Unit unitFromString(String text) {
         if (text != null) {
             for (Unit unit : Unit.values()) {
-                if (text.equalsIgnoreCase(unit.text)) {
+                if (text.equalsIgnoreCase(unit.mText)) {
                     return unit;
                 }
             }
