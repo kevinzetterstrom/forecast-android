@@ -42,14 +42,14 @@ double longitude = -74.7829;
 ForecastClient.getInstance()
                     .getForecast(latitude, longitude, new Callback<Forecast>() {
                         @Override
-                        public void onResponse(Response<Forecast> response) {
+                        public void onResponse(Call<Forecast> forecastCall, Response<Forecast> response) {
                             if (response.isSuccess()) {
                                 Forecast forecast = response.body();
                             }
                         }
 
                         @Override
-                        public void onFailure(Throwable t) {
+                        public void onFailure(Call<Forecast> forecastCall, Throwable t) {
 
                         }
                     });
