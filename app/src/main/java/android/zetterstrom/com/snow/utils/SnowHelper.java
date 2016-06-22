@@ -27,6 +27,7 @@ import android.zetterstrom.com.snow.callbacks.ForecastCallback;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
@@ -64,8 +65,8 @@ public class SnowHelper {
             ForecastClient.getInstance()
                     .getForecast(forecastLatitude, forecastLongitude, new Callback<Forecast>() {
                         @Override
-                        public void onResponse(Response<Forecast> response) {
-                            if (response.isSuccess()) {
+                        public void onResponse(Call<Forecast> forecastCall, Response<Forecast> response) {
+                            if (response.isSuccessful()) {
                                 callback.onForecastSuccess(response.body());
                             } else {
                                 callback.onForecastError(null);
@@ -73,7 +74,7 @@ public class SnowHelper {
                         }
 
                         @Override
-                        public void onFailure(Throwable t) {
+                        public void onFailure(Call<Forecast> forecastCall, Throwable t) {
                             callback.onForecastError(t);
                         }
                     });
