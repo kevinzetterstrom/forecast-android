@@ -76,20 +76,21 @@ public enum Language {
     @SerializedName(ModelConstants.LANGUAGE_TRADITIONAL_CHINESE)
     TRADITIONAL_CHINESE(ModelConstants.LANGUAGE_TRADITIONAL_CHINESE);
 
-    private String text;
+    private final String mText;
 
     Language(String text) {
-        this.text = text;
+        mText = text;
     }
 
     public String getText() {
-        return this.text;
+        return mText;
     }
 
+    @SuppressWarnings("unused")
     public static Language languageFromString(String text) {
         if (text != null) {
             for (Language language : Language.values()) {
-                if (text.equalsIgnoreCase(language.text)) {
+                if (text.equalsIgnoreCase(language.mText)) {
                     return language;
                 }
             }

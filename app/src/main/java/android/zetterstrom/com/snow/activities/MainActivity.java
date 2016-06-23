@@ -21,6 +21,8 @@ import android.zetterstrom.com.snow.R;
 import android.zetterstrom.com.snow.fragments.SnowFragment;
 
 /**
+ * Activity to demo the Forecast API
+ * <p/>
  * Created by Kevin Zetterstrom  on 2/9/16.
  */
 public class MainActivity extends AppCompatActivity {

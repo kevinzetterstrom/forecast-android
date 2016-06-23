@@ -31,6 +31,7 @@ import java.util.Date;
  * <p/>
  * Created by Kevin Zetterstrom  on 2/10/16.
  */
+@SuppressWarnings("unused")
 public class Alert implements Serializable {
 
     private static final long serialVersionUID = -4721384892605656941L;

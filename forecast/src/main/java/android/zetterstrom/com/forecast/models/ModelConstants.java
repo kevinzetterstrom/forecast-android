@@ -20,7 +20,7 @@ package android.zetterstrom.com.forecast.models;
  * <p/>
  * Created by Kevin Zetterstrom on 2/11/16.
  */
-class ModelConstants {
+final class ModelConstants {
 
     // Field strings
     static final String FIELD_TITLE = "title";
@@ -135,4 +135,7 @@ class ModelConstants {
     static final String UNIT_UK = "uk";
     static final String UNIT_UK2 = "uk2";
     static final String UNIT_AUTO = "auto";
+
+    private ModelConstants() {
+    }
 }

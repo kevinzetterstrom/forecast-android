@@ -51,20 +51,21 @@ public enum Icon {
     @SerializedName(ModelConstants.ICON_TORNADO)
     TORNADO(ModelConstants.ICON_TORNADO);
 
-    private String text;
+    private final String mText;
 
     Icon(String text) {
-        this.text = text;
+        mText = text;
     }
 
     public String getText() {
-        return this.text;
+        return mText;
     }
 
+    @SuppressWarnings("unused")
     public static Icon iconFromString(String text) {
         if (text != null) {
             for (Icon icon : Icon.values()) {
-                if (text.equalsIgnoreCase(icon.text)) {
+                if (text.equalsIgnoreCase(icon.mText)) {
                     return icon;
                 }
             }
