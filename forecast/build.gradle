@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/kevzetterstrom/forecast-android'
     gitUrl = 'https://github.com/kevzetterstrom/forecast-android.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.1.1'
 
     developerId = 'kevzetterstrom'
     developerName = 'Kevin Zetterstrom'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
-        versionName "1.1.0"
+        versionName "1.1.1"
     }
     buildTypes {
         release {
