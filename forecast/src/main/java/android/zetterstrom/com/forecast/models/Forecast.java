@@ -48,7 +48,7 @@ public class Forecast implements Serializable {
     private String mTimezone;
 
     @SerializedName(ModelConstants.FIELD_OFFSET)
-    private int mOffset;
+    private double mOffset;
 
     @Nullable
     @SerializedName(ModelConstants.FIELD_CURRENTLY)
@@ -86,7 +86,7 @@ public class Forecast implements Serializable {
         return mTimezone;
     }
 
-    public int getOffset() {
+    public double getOffset() {
         return mOffset;
     }
 
