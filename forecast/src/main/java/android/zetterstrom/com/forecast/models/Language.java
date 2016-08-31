@@ -18,17 +18,23 @@ package android.zetterstrom.com.forecast.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * [language] may be ar (Arabic), bs (Bosnian), cs (Czech), de (German), el (Greek),
- * en (English, which is the default), es (Spanish), fr (French), hr (Croatian), hu (Hungarian),
- * it (Italian), nl (Dutch), pl (Polish), pt (Portuguese), ru (Russian), sk (Slovak), sr (Serbian),
- * sv (Swedish), tet (Tetum), tr (Turkish), uk (Ukrainian), x-pig-latin (Igpay Atinlay),
- * zh (simplified Chinese), or zh-tw (traditional Chinese).
+ * [language] may be ar (Arabic), az (Azerbaijani), be (Belarusian), bs (Bosnian),
+ * cs (Czech), de (German), el (Greek), en (English, which is the default),
+ * es (Spanish), fr (French), hr (Croatian), hu (Hungarian), id (Indonesian),
+ * it (Italian), is (Icelandic), kw (Cornish), nb (Norwegian Bokmål), nl (Dutch),
+ * pl (Polish), pt (Portuguese), ru (Russian), sk (Slovak), sr (Serbian),
+ * sv (Swedish), tet (Tetum), tr (Turkish), uk (Ukrainian),
+ * x-pig-latin (Igpay Atinlay), zh (simplified Chinese), or zh-tw (traditional Chinese)
  * <p/>
  * Created by Kevin Zetterstrom on 2/11/16.
  */
 public enum Language {
     @SerializedName(ModelConstants.LANGUAGE_ARABIC)
     ARABIC(ModelConstants.LANGUAGE_ARABIC),
+    @SerializedName(ModelConstants.LANGUAGE_AZERBAIJANI)
+    AZERBAIJANI(ModelConstants.LANGUAGE_AZERBAIJANI),
+    @SerializedName(ModelConstants.LANGUAGE_BELARUSIAN)
+    BELARUSIAN(ModelConstants.LANGUAGE_BELARUSIAN),
     @SerializedName(ModelConstants.LANGUAGE_BOSNIAN)
     BOSNIAN(ModelConstants.LANGUAGE_BOSNIAN),
     @SerializedName(ModelConstants.LANGUAGE_CZECH)
@@ -47,8 +53,16 @@ public enum Language {
     CROATIAN(ModelConstants.LANGUAGE_CROATIAN),
     @SerializedName(ModelConstants.LANGUAGE_HUNGARIAN)
     HUNGARIAN(ModelConstants.LANGUAGE_HUNGARIAN),
+    @SerializedName(ModelConstants.LANGUAGE_INDONESIAN)
+    INDONESIAN(ModelConstants.LANGUAGE_INDONESIAN),
     @SerializedName(ModelConstants.LANGUAGE_ITALIAN)
     ITALIAN(ModelConstants.LANGUAGE_ITALIAN),
+    @SerializedName(ModelConstants.LANGUAGE_ICELANDIC)
+    ICELANDIC(ModelConstants.LANGUAGE_ICELANDIC),
+    @SerializedName(ModelConstants.LANGUAGE_CORNISH)
+    CORNISH(ModelConstants.LANGUAGE_CORNISH),
+    @SerializedName(ModelConstants.LANGUAGE_NORWEGIAN_BOKMAL)
+    NORWEGIAN_BOKMAL(ModelConstants.LANGUAGE_NORWEGIAN_BOKMAL),
     @SerializedName(ModelConstants.LANGUAGE_DUTCH)
     DUTCH(ModelConstants.LANGUAGE_DUTCH),
     @SerializedName(ModelConstants.LANGUAGE_POLISH)

@@ -98,6 +98,8 @@ final class ModelConstants {
 
     // Language enum strings
     static final String LANGUAGE_ARABIC = "ar";
+    static final String LANGUAGE_AZERBAIJANI = "az";
+    static final String LANGUAGE_BELARUSIAN = "be";
     static final String LANGUAGE_BOSNIAN = "bs";
     static final String LANGUAGE_CZECH = "cs";
     static final String LANGUAGE_GERMAN = "de";
@@ -107,7 +109,11 @@ final class ModelConstants {
     static final String LANGUAGE_FRENCH = "fr";
     static final String LANGUAGE_CROATIAN = "hr";
     static final String LANGUAGE_HUNGARIAN = "hu";
+    static final String LANGUAGE_INDONESIAN = "id";
     static final String LANGUAGE_ITALIAN = "it";
+    static final String LANGUAGE_ICELANDIC = "is";
+    static final String LANGUAGE_CORNISH = "kw";
+    static final String LANGUAGE_NORWEGIAN_BOKMAL = "nb";
     static final String LANGUAGE_DUTCH = "nl";
     static final String LANGUAGE_POLISH = "pl";
     static final String LANGUAGE_PORTUGUESE = "pt";
