@@ -164,7 +164,7 @@ public final class ForecastClient {
      * @return the Response object with a Forecast
      * @throws IOException
      */
-    public Response<Forecast> getForecastSync(double latitude, double longitude, @Nullable Double time)
+    public Response<Forecast> getForecastSync(double latitude, double longitude, @Nullable Integer time)
             throws IOException {
         return getForecastSync(latitude, longitude, time, null, null, null, false);
     }
@@ -190,7 +190,7 @@ public final class ForecastClient {
      * @return the Response object with a Forecast
      * @throws IOException
      */
-    public Response<Forecast> getForecastSync(double latitude, double longitude, @Nullable Double time,
+    public Response<Forecast> getForecastSync(double latitude, double longitude, @Nullable Integer time,
                                               @Nullable Language language, @Nullable Unit unit,
                                               @Nullable List<String> excludeList, boolean extendHourly)
             throws IOException {
@@ -225,7 +225,7 @@ public final class ForecastClient {
      * @param forecastCallback {@link Callback} to be invoked when request completes, with a {@link Forecast}
      * @return {@link Call} object, so that you may cancel the request
      */
-    public Call<Forecast> getForecast(double latitude, double longitude, @Nullable Double time,
+    public Call<Forecast> getForecast(double latitude, double longitude, @Nullable Integer time,
                                       @NonNull Callback<Forecast> forecastCallback) {
 
         return getForecast(latitude, longitude, time, null, null, null, false, forecastCallback);
@@ -252,7 +252,7 @@ public final class ForecastClient {
      * @param forecastCallback {@link Callback} to be invoked when request completes, with a {@link Forecast}
      * @return {@link Call} object, so that you may cancel the request
      */
-    public Call<Forecast> getForecast(double latitude, double longitude, @Nullable Double time,
+    public Call<Forecast> getForecast(double latitude, double longitude, @Nullable Integer time,
                                       @Nullable Language language, @Nullable Unit unit,
                                       @Nullable List<String> excludeList, boolean extendHourly,
                                       @NonNull Callback<Forecast> forecastCallback) {
@@ -267,7 +267,7 @@ public final class ForecastClient {
         return forecastCall;
     }
 
-    private static String getLocation(double longitude, double latitude, @Nullable Double time) {
+    private static String getLocation(double longitude, double latitude, @Nullable Integer time) {
         String location = String.valueOf(latitude) + "," + String.valueOf(longitude);
         if (time != null) {
             location += "," + time.toString();
