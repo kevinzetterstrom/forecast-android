@@ -209,7 +209,7 @@ public class DataPoint implements Serializable {
 
     @Nullable
     @SerializedName(ModelConstants.FIELD_UV_INDEX_TIME)
-    private Double mUvIndexTime;
+    private Date mUvIndexTime;
 
     public Date getTime() {
         return mTime;
