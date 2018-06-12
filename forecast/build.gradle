@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/kevzetterstrom/forecast-android'
     gitUrl = 'https://github.com/kevzetterstrom/forecast-android.git'
 
-    libraryVersion = '1.2.0'
+    libraryVersion = '1.2.1'
 
     developerId = 'kevzetterstrom'
     developerName = 'Kevin Zetterstrom'
