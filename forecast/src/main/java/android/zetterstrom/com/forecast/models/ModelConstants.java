@@ -80,6 +80,17 @@ final class ModelConstants {
     static final String FIELD_PRESSURE = "pressure";
     static final String FIELD_VISIBILITY = "visibility";
     static final String FIELD_OZONE = "ozone";
+    static final String FIELD_UV_INDEX = "uvIndex";
+    static final String FIELD_UV_INDEX_TIME = "uvIndexTime";
+    static final String FIELD_APPARENT_TEMPERATURE_LOW = "apparentTemperatureLow";
+    static final String FIELD_APPARENT_TEMPERATURE_LOW_TIME = "apparentTemperatureLowTime";
+    static final String FIELD_APPARENT_TEMPERATURE_HIGH = "apparentTemperatureHigh";
+    static final String FIELD_APPARENT_TEMPERATURE_HIGH_TIME = "apparentTemperatureHighTime";
+    static final String FIELD_TEMPERATURE_LOW = "temperatureLow";
+    static final String FIELD_TEMPERATURE_LOW_TIME = "temperatureLowTime";
+    static final String FIELD_TEMPERATURE_HIGH = "temperatureHigh";
+    static final String FIELD_TEMPERATURE_HIGH_TIME = "temperatureHighTime";
+
 
     // Icon enum strings
     static final String ICON_CLEAR_DAY = "clear-day";
