@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.coditramuntana.festinasoprod.forecast.models;
+package android.zetterstrom.com.forecast.models;
 
 /**
  * Package private class to hold constants used for model parsing

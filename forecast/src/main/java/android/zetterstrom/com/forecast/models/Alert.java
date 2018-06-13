@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.coditramuntana.festinasoprod.forecast.models;
+package android.zetterstrom.com.forecast.models;
 
 import android.support.annotation.Nullable;
 
@@ -43,7 +43,7 @@ public class Alert implements Serializable {
 
     @Nullable
     @SerializedName(ModelConstants.FIELD_REGIONS)
-    private List<String> mRegions = null;
+    private List<String> mRegions;
 
     @Nullable
     @SerializedName(ModelConstants.FIELD_SEVERITY)
