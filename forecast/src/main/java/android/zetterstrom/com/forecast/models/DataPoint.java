@@ -139,6 +139,37 @@ public class DataPoint implements Serializable {
     @Nullable
     @SerializedName(ModelConstants.FIELD_APPARENT_TEMPERATURE_MAX_TIME)
     private Date mApparentTemperatureMaxTime;
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_APPARENT_TEMPERATURE_LOW)
+    private Double mApparentTemperatureLow;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_APPARENT_TEMPERATURE_LOW_TIME)
+    private Date mApparentTemperatureLowTime;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_APPARENT_TEMPERATURE_HIGH)
+    private Double mApparentTemperatureHigh;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_APPARENT_TEMPERATURE_HIGH_TIME)
+    private Date mApparentTemperatureHighTime;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_TEMPERATURE_LOW)
+    private Double mTemperatureLow;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_TEMPERATURE_LOW_TIME)
+    private Date mTemperatureLowTime;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_TEMPERATURE_HIGH)
+    private Double mTemperatureHigh;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_TEMPERATURE_HIGH_TIME)
+    private Date mTemperatureHighTime;
 
     @Nullable
     @SerializedName(ModelConstants.FIELD_DEW_POINT)
@@ -171,6 +202,14 @@ public class DataPoint implements Serializable {
     @Nullable
     @SerializedName(ModelConstants.FIELD_OZONE)
     private Double mOzone;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_UV_INDEX)
+    private Double mUvIndex;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_UV_INDEX_TIME)
+    private Date mUvIndexTime;
 
     public Date getTime() {
         return mTime;
@@ -292,6 +331,45 @@ public class DataPoint implements Serializable {
     }
 
     @Nullable
+    public Double getApparentTemperatureLow() {
+        return mApparentTemperatureLow;
+    }
+
+    @Nullable
+    public Date getApparentTemperatureLowTime() {
+        return mApparentTemperatureLowTime;
+    }
+
+    @Nullable
+    public Double getApparentTemperatureHigh() {
+        return mApparentTemperatureHigh;
+    }
+
+    @Nullable
+    public Date getApparentTemperatureHighTime() {
+        return mApparentTemperatureHighTime;
+    }
+    @Nullable
+    public Double getTemperatureLow() {
+        return mTemperatureLow;
+    }
+
+    @Nullable
+    public Date getTemperatureLowTime() {
+        return mTemperatureLowTime;
+    }
+
+    @Nullable
+    public Double getTemperatureHigh() {
+        return mTemperatureHigh;
+    }
+
+    @Nullable
+    public Date getTemperatureHighTime() {
+        return mTemperatureHighTime;
+    }
+
+    @Nullable
     public Double getDewPoint() {
         return mDewPoint;
     }
@@ -329,5 +407,15 @@ public class DataPoint implements Serializable {
     @Nullable
     public Double getOzone() {
         return mOzone;
+    }
+
+    @Nullable
+    public Double getUvIndex() {
+        return mUvIndex;
+    }
+
+    @Nullable
+    public Date getUvIndexTime() {
+        return mUvIndexTime;
     }
 }
