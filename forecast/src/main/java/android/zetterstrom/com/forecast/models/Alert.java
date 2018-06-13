@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package android.zetterstrom.com.forecast.models;
+package com.coditramuntana.festinasoprod.forecast.models;
 
 import android.support.annotation.Nullable;
 
@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * An alert object represents a severe weather warning issued for the requested location by a
@@ -41,6 +42,14 @@ public class Alert implements Serializable {
     private String mTitle;
 
     @Nullable
+    @SerializedName(ModelConstants.FIELD_REGIONS)
+    private List<String> mRegions = null;
+
+    @Nullable
+    @SerializedName(ModelConstants.FIELD_SEVERITY)
+    private String mSeverity;
+
+    @Nullable
     @SerializedName(ModelConstants.FIELD_DESCRIPTION)
     private String mDescription;
 
@@ -53,18 +62,37 @@ public class Alert implements Serializable {
     private String mUri;
 
     @Nullable
+    @SerializedName(ModelConstants.FIELD_TIME)
+    private Date mTime;
+
+    @Nullable
     public String getTitle() {
         return mTitle;
     }
 
     @Nullable
-    public String getDescription() {
-        return mDescription;
+    public List<String> getRegions() {
+        return mRegions;
+    }
+
+    @Nullable
+    public String getSeverity() {
+        return mSeverity;
+    }
+
+    @Nullable
+    public Date getTime() {
+        return mTime;
     }
 
     @Nullable
     public Date getExpires() {
         return mExpires;
+    }
+
+    @Nullable
+    public String getDescription() {
+        return mDescription;
     }
 
     @Nullable
